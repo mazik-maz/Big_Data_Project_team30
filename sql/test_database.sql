@@ -1,0 +1,1 @@
+SELECT * FROM nypd_complaints LIMIT 10;
