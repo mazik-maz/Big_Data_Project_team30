@@ -22,7 +22,7 @@ hdfs dfs -mkdir -p "$HDFS_BASE/models"
 hdfs dfs -mkdir -p "$HDFS_BASE/output"
 
 echo "=== [2] Running Spark ML pipeline ==="
-spark-submit  --master yarn scripts/new_model.py > "$OUTPUT_DIR/spark_job.log" 2>&1
+spark-submit  --master yarn scripts/model.py > "$OUTPUT_DIR/spark_job.log" 2>&1
 if [ $? -ne 0 ]; then
     echo "Spark job failed. Check $OUTPUT_DIR/spark_job.log for details."
     exit 1
